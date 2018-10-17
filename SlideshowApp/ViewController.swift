@@ -9,13 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var susumuButton: UIButton!
+    @IBOutlet weak var modoruButton: UIButton!
     
     @IBOutlet var imageview: UIImageView!
     var imageArray = ["slide01", "slide02", "slide03", "slide04"]
     var index = 0
     
     var flg = false
-    
+    var isplay = false
     @IBAction func onTapImage(_ sender: Any) {
         
         // segueを使用して画面遷移
@@ -31,11 +33,12 @@ class ViewController: UIViewController {
         if index >= imageArray.count {
             index = 0
         }
-        if index <= 0 {
+        if index < 0 {
             index = 3
         }
         imageview.image = UIImage(named: imageArray[index])
     }
+    
     
     // もどるボタンの動作を設定
     @IBAction func modoru(_ sender: UIButton) {
@@ -62,9 +65,26 @@ class ViewController: UIViewController {
     
     //再生ボタンを押すとスライドショースタート
     @IBAction func startSlide(_ sender: UIButton) {
+        
+        if isplay {
+            self.timer.invalidate()
+            self.timer = nil
+            playbutton.setTitle("再生", for: .normal)
+            //ボタンの有効化
+            susumuButton.isEnabled = true
+            modoruButton.isEnabled = true
+        } else {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
-
+            playbutton.setTitle("停止", for: .normal)
+            //ボタンの無効化
+            susumuButton.isEnabled = false
+            modoruButton.isEnabled = false
+        }
+        isplay = !isplay
+        
     }
+    
+    @IBOutlet weak var playbutton: UIButton!
     
     @IBAction func tapped(sender: Any) {
         if flg {

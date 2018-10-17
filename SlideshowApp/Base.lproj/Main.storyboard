@@ -42,9 +42,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEh-p0-PjK">
-                                <rect key="frame" x="281" y="349" width="66" height="30"/>
+                                <rect key="frame" x="299" y="349" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="再生/停止"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startSlide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XF-xQ-1dC"/>
                                 </connections>
@@ -59,6 +59,9 @@
                     </view>
                     <connections>
                         <outlet property="imageview" destination="rnH-a6-dF5" id="LpZ-BX-z9S"/>
+                        <outlet property="modoruButton" destination="B7X-6G-9Sq" id="fbC-12-GH6"/>
+                        <outlet property="playbutton" destination="hEh-p0-PjK" id="nkn-m1-RO8"/>
+                        <outlet property="susumuButton" destination="Upk-Uy-MqX" id="rr3-YG-Uqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
