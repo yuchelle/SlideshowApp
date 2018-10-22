@@ -11,17 +11,31 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var susumuButton: UIButton!
     @IBOutlet weak var modoruButton: UIButton!
+    @IBOutlet weak var imageview: UIButton!
+            //10/22追加
+
     
-    @IBOutlet var imageview: UIImageView!
-    var imageArray = ["slide01", "slide02", "slide03", "slide04"]
+
+    var imageArray = ["slide01.jpg", "slide02.jpg", "slide03.jpg", "slide04.jpg"]
     var index = 0
     
     var flg = false
     var isplay = false
-    @IBAction func onTapImage(_ sender: Any) {
-        
-        // segueを使用して画面遷移
-        performSegue(withIdentifier: "result", sender: nil)
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のExpandViewControllerを取得
+        let expandViewController:ExpandViewController = segue.destination as! ExpandViewController
+        expandViewController.ExpandImage = UIImage(named: imageArray[index])
+        if isplay {
+            self.timer.invalidate()
+            self.timer = nil
+        }; isplay = !isplay //10/22追加
+    }
+    
+    
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    
     }
     
     // すすむボタンの動作を設定
@@ -36,7 +50,7 @@ class ViewController: UIViewController {
         if index < 0 {
             index = 3
         }
-        imageview.image = UIImage(named: imageArray[index])
+        imageview.setImage(UIImage(named: imageArray[index]), for: .normal)
     }
     
     
@@ -86,16 +100,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playbutton: UIButton!
     
-    @IBAction func tapped(sender: Any) {
-        if flg {
-            imageview.image = UIImage(named: imageArray[index])
-            flg = false
-        }
-        else {
-            imageview.image = UIImage(named: imageArray[index])
-            flg = true
-        }
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
