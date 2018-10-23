@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var susumuButton: UIButton!
     @IBOutlet weak var modoruButton: UIButton!
-    @IBOutlet weak var imageview: UIButton!
-            //10/22追加
-
+    @IBOutlet weak var imageview: UIButton! //10/22追加
     
 
     var imageArray = ["slide01.jpg", "slide02.jpg", "slide03.jpg", "slide04.jpg"]
@@ -29,7 +27,13 @@ class ViewController: UIViewController {
         if isplay {
             self.timer.invalidate()
             self.timer = nil
-        }; isplay = !isplay //10/22追加
+            isplay = !isplay //10/23追加
+        }//; isplay = !isplay //10/22追加
+        
+        playbutton.setTitle("再生", for: .normal) //10/23追加
+        //ボタンの有効化 10/23追加
+        susumuButton.isEnabled = true
+        modoruButton.isEnabled = true
     }
     
     
@@ -67,6 +71,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         displayImage()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     

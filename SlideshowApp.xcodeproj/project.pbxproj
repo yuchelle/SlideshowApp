@@ -17,6 +17,9 @@
 		A569B7E721708D2200BD38AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569B7E621708D2200BD38AA /* Assets.xcassets */; };
 		A569B7EA21708D2200BD38AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569B7E821708D2200BD38AA /* LaunchScreen.storyboard */; };
 		A57CC556217DBB1F00B0075D /* ExpandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57CC555217DBB1F00B0075D /* ExpandViewController.swift */; };
+		A57CC558217E98EF00B0075D /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A57CC557217E98EF00B0075D /* play.png */; };
+		A57CC55B217E994000B0075D /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = A57CC559217E994000B0075D /* arrow_left.png */; };
+		A57CC55C217E994000B0075D /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = A57CC55A217E994000B0075D /* arrow_right.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		A569B7E921708D2200BD38AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A569B7EB21708D2200BD38AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57CC555217DBB1F00B0075D /* ExpandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandViewController.swift; sourceTree = "<group>"; };
+		A57CC557217E98EF00B0075D /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		A57CC559217E994000B0075D /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		A57CC55A217E994000B0075D /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 				A52454A0217728CE0062B180 /* slide02.jpg */,
 				A524549D217728CE0062B180 /* slide03.jpg */,
 				A524549F217728CE0062B180 /* slide04.jpg */,
+				A57CC557217E98EF00B0075D /* play.png */,
+				A57CC559217E994000B0075D /* arrow_left.png */,
+				A57CC55A217E994000B0075D /* arrow_right.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,10 +147,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A569B7EA21708D2200BD38AA /* LaunchScreen.storyboard in Resources */,
+				A57CC558217E98EF00B0075D /* play.png in Resources */,
 				A52454A4217728CF0062B180 /* slide02.jpg in Resources */,
 				A52454A3217728CF0062B180 /* slide04.jpg in Resources */,
 				A569B7E721708D2200BD38AA /* Assets.xcassets in Resources */,
 				A52454A1217728CE0062B180 /* slide03.jpg in Resources */,
+				A57CC55C217E994000B0075D /* arrow_right.png in Resources */,
+				A57CC55B217E994000B0075D /* arrow_left.png in Resources */,
 				A569B7E521708D2100BD38AA /* Main.storyboard in Resources */,
 				A52454A2217728CF0062B180 /* slide01.jpg in Resources */,
 			);

@@ -19,24 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upk-Uy-MqX">
-                                <rect key="frame" x="27.666666666666671" y="349" width="46" height="30"/>
+                                <rect key="frame" x="301" y="349" width="46" height="30"/>
                                 <state key="normal" title="すすむ"/>
                                 <connections>
                                     <action selector="susumu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6H-DU-EYu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEh-p0-PjK">
-                                <rect key="frame" x="316.66666666666669" y="349" width="31" height="30"/>
-                                <state key="normal" title="再生"/>
-                                <connections>
-                                    <action selector="startSlide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XF-xQ-1dC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7X-6G-9Sq">
-                                <rect key="frame" x="164.66666666666666" y="349" width="46" height="30"/>
-                                <state key="normal" title="もどる"/>
-                                <connections>
-                                    <action selector="modoru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XH-JR-Ngj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwU-Cd-9go">
@@ -50,16 +36,30 @@
                                     <segue destination="pgk-EZ-nzj" kind="show" id="9B0-3r-a3r"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7X-6G-9Sq">
+                                <rect key="frame" x="27" y="349" width="46" height="30"/>
+                                <state key="normal" title="もどる"/>
+                                <connections>
+                                    <action selector="modoru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XH-JR-Ngj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEh-p0-PjK">
+                                <rect key="frame" x="172" y="349" width="31" height="30"/>
+                                <state key="normal" title="再生"/>
+                                <connections>
+                                    <action selector="startSlide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XF-xQ-1dC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Upk-Uy-MqX" firstAttribute="leading" secondItem="JwU-Cd-9go" secondAttribute="leading" id="HWu-ku-0y3"/>
-                            <constraint firstItem="B7X-6G-9Sq" firstAttribute="top" secondItem="JwU-Cd-9go" secondAttribute="bottom" constant="35" id="I0X-Sh-uFn"/>
-                            <constraint firstItem="hEh-p0-PjK" firstAttribute="trailing" secondItem="JwU-Cd-9go" secondAttribute="trailing" id="Wkr-6q-Etv"/>
-                            <constraint firstItem="B7X-6G-9Sq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bKU-cl-yX3"/>
-                            <constraint firstItem="hEh-p0-PjK" firstAttribute="top" secondItem="JwU-Cd-9go" secondAttribute="bottom" constant="35" id="mRH-ka-Bjo"/>
+                            <constraint firstItem="B7X-6G-9Sq" firstAttribute="top" secondItem="JwU-Cd-9go" secondAttribute="bottom" constant="35" id="4Um-IH-146"/>
+                            <constraint firstItem="hEh-p0-PjK" firstAttribute="top" secondItem="JwU-Cd-9go" secondAttribute="bottom" constant="35" id="6gu-Rl-UHK"/>
+                            <constraint firstItem="B7X-6G-9Sq" firstAttribute="leading" secondItem="JwU-Cd-9go" secondAttribute="leading" id="XJC-V9-6BR"/>
+                            <constraint firstItem="Upk-Uy-MqX" firstAttribute="trailing" secondItem="JwU-Cd-9go" secondAttribute="trailing" id="b1l-MA-m9g"/>
+                            <constraint firstItem="hEh-p0-PjK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lPe-9I-IVm"/>
+                            <constraint firstItem="Upk-Uy-MqX" firstAttribute="top" secondItem="JwU-Cd-9go" secondAttribute="bottom" constant="35" id="msN-Sg-ekm"/>
                             <constraint firstItem="JwU-Cd-9go" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="nOn-oZ-QBN"/>
-                            <constraint firstItem="Upk-Uy-MqX" firstAttribute="top" secondItem="JwU-Cd-9go" secondAttribute="bottom" constant="35" id="wre-gU-ip6"/>
                             <constraint firstItem="JwU-Cd-9go" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yC2-N3-nfa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
